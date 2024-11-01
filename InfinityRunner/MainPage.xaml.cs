@@ -1,4 +1,6 @@
 ﻿namespace InfinityRunner;
+//ado ado ado se leu é viado
+
 
 public partial class MainPage : ContentPage
 {
@@ -7,7 +9,6 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
-
 
 }
 
