@@ -23,6 +23,10 @@ public partial class MainPage : ContentPage
 
 	private int Speed3 = 0;
 
+	private int Speed4 = 0;
+
+	private int Speed5 = 0;
+
 	private int CharacterSpeed = 0;
 
 	private int WindowWidth = 0;
@@ -63,9 +67,22 @@ public partial class MainPage : ContentPage
 		foreach (var LayerThree in HorizontalLayer3.Children)
 		(LayerThree as Image).WidthRequest = width;
 
+		foreach (var LayerFour in HorizontalLayer4.Children)
+		(LayerFour as Image).WidthRequest = width;
+
+		foreach (var LayerFive in HorizontalLayer5.Children)
+		(LayerFive as Image).WidthRequest = width;
+
+		foreach (var Floor in HorizontalChao.Children)
+		(Floor as Image).WidthRequest = width;
+
 		HorizontalLayer1.WidthRequest = width * 1.5;
 		HorizontalLayer2.WidthRequest = width * 1.5;
 		HorizontalLayer3.WidthRequest = width * 1.5;
+		HorizontalLayer4.WidthRequest = width * 1.5;
+		HorizontalLayer5.WidthRequest = width * 1.5;
+		HorizontalChao.WidthRequest = width * 1.5;
+
 
 	}
 
@@ -74,8 +91,11 @@ public partial class MainPage : ContentPage
 	private void SpeedCalculate(double width)
 	{
 		Speed1 = (int) (width * 0.001);
-		Speed2 = (int) (width * 0.004);
-		Speed3 = (int) (width * 0.01);
+		Speed2 = (int) (width * 0.002);
+		Speed3 = (int) (width * 0.004);
+		Speed4 = (int) (width * 0.008);
+		Speed5 = (int) (width * 0.01);
+		CharacterSpeed = (int) (width * 0.012);
 	}
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -85,7 +105,10 @@ public partial class MainPage : ContentPage
 		MoveCenario();
 		ManageCenario(HorizontalLayer1);
 		ManageCenario(HorizontalLayer2);
-		ManageCenario(HorizontalLayer3);	
+		ManageCenario(HorizontalLayer3);
+		ManageCenario(HorizontalLayer4);
+		ManageCenario(HorizontalLayer5);
+		ManageCenario(HorizontalChao);
 	}
 
 	private void MoveCenario()
@@ -93,6 +116,9 @@ public partial class MainPage : ContentPage
 		HorizontalLayer1.TranslationX -= Speed1;
 		HorizontalLayer2.TranslationX -= Speed2;
 		HorizontalLayer3.TranslationX -= Speed3;
+		HorizontalLayer4.TranslationX -= Speed4;
+		HorizontalLayer5.TranslationX -= Speed5;
+		HorizontalChao.TranslationX -= CharacterSpeed;
 	}
 
 	private void ManageCenario(HorizontalStackLayout horizontal)
