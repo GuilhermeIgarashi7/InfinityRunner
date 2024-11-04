@@ -5,15 +5,44 @@
              Shell.NavBarIsVisible="False">
 
         <Grid>
-        
-            <Image Source="fundo1.jpg"
-                    VerticalOptions="StartAndExpand"
-                    Aspect="AspectFill"/>
-            <Image Source="fundo2.png"
-                    VerticalOptions="FillAndExpand"/>
-            <Image Source="chao.jpg"
-                    VerticalOptions="EndAndExpand"
-                    Margin="0,50,0,0"/>
+
+                <HorizontalStackLayout x:Name="HorizontalLayer1">
+
+                        <Image Source="fundo1.jpg"
+                               VerticalOptions="StartAndExpand"
+                               Aspect="AspectFill"/>
+                        <Image Source="fundo1.jpg"
+                               VerticalOptions="StartAndExpand"
+                               Aspect="AspectFill"/>
+                        <Image Source="fundo1.jpg"
+                               VerticalOptions="StartAndExpand"
+                               Aspect="AspectFill"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout x:Name="HorizontalLayer2">
+
+                        <Image Source="fundo2.png"
+                               VerticalOptions="FillAndExpand"/>
+                        <Image Source="fundo2.png"
+                               VerticalOptions="FillAndExpand"/>
+                        <Image Source="fundo2.png"
+                               VerticalOptions="FillAndExpand"/>
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout x:Name="HorizontalLayer3">
+
+                        <Image Source="chao.jpg"
+                               VerticalOptions="EndAndExpand"
+                               Margin="0,50,0,0"/>
+                        <Image Source="chao.jpg"
+                               VerticalOptions="EndAndExpand"
+                               Margin="0,50,0,0"/>
+                        <Image Source="chao.jpg"
+                               VerticalOptions="EndAndExpand"
+                               Margin="0,50,0,0"/>
+
+                </HorizontalStackLayout>
 
         </Grid>
 
