@@ -19,6 +19,19 @@
                                Aspect="AspectFill"/>
                 </HorizontalStackLayout>
 
+                <HorizontalStackLayout x:Name="HorizontalLayer6">
+
+                        <Image Source="fundo6.png"
+                               VerticalOptions="StartAndExpand"
+                               Aspect="AspectFill"/>
+                        <Image Source="fundo6.png"
+                               VerticalOptions="StartAndExpand"
+                               Aspect="AspectFill"/>
+                        <Image Source="fundo6.png"
+                               VerticalOptions="StartAndExpand"
+                               Aspect="AspectFill"/>
+                </HorizontalStackLayout>
+
                 <HorizontalStackLayout x:Name="HorizontalLayer2">
 
                         <Image Source="fundo2.png"

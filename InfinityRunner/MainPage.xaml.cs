@@ -27,6 +27,8 @@ public partial class MainPage : ContentPage
 
 	private int Speed5 = 0;
 
+	private int Speed6 = 0;	
+
 	private int CharacterSpeed = 0;
 
 	private int WindowWidth = 0;
@@ -81,6 +83,7 @@ public partial class MainPage : ContentPage
 		HorizontalLayer3.WidthRequest = width * 1.5;
 		HorizontalLayer4.WidthRequest = width * 1.5;
 		HorizontalLayer5.WidthRequest = width * 1.5;
+		HorizontalLayer6.WidthRequest = width * 1.5;
 		HorizontalChao.WidthRequest = width * 1.5;
 
 
@@ -95,6 +98,7 @@ public partial class MainPage : ContentPage
 		Speed3 = (int) (width * 0.004);
 		Speed4 = (int) (width * 0.008);
 		Speed5 = (int) (width * 0.01);
+		Speed6 = (int) (width * 0.003);
 		CharacterSpeed = (int) (width * 0.012);
 	}
 
@@ -108,6 +112,7 @@ public partial class MainPage : ContentPage
 		ManageCenario(HorizontalLayer3);
 		ManageCenario(HorizontalLayer4);
 		ManageCenario(HorizontalLayer5);
+		ManageCenario(HorizontalLayer6);
 		ManageCenario(HorizontalChao);
 	}
 
@@ -118,6 +123,7 @@ public partial class MainPage : ContentPage
 		HorizontalLayer3.TranslationX -= Speed3;
 		HorizontalLayer4.TranslationX -= Speed4;
 		HorizontalLayer5.TranslationX -= Speed5;
+		HorizontalLayer6.TranslationX -= Speed6;
 		HorizontalChao.TranslationX -= CharacterSpeed;
 	}
 
