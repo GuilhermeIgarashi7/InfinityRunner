@@ -36,6 +36,13 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
+	protected override void OnAppearing()
+	{
+		base.OnAppearing();
+		Drawn();
+		//o drawn tá só de teste
+	}
+
 
 	protected override void OnSizeAllocated(double width, double heigth)
 	{
@@ -70,6 +77,43 @@ public partial class MainPage : ContentPage
 		Speed3 = (int) (width * 0.01);
 	}
 
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	private void GerenciaCenarios()
+	{
+		MoveCenario();
+		ManageCenario(HorizontalLayer1);
+		ManageCenario(HorizontalLayer2);
+		ManageCenario(HorizontalLayer3);	
+	}
+
+	private void MoveCenario()
+	{
+		HorizontalLayer1.TranslationX -= Speed1;
+		HorizontalLayer2.TranslationX -= Speed2;
+		HorizontalLayer3.TranslationX -= Speed3;
+	}
+
+	private void ManageCenario(HorizontalStackLayout horizontal)
+	{
+		var visualizar = (horizontal.Children.First() as Image);
+		if (visualizar.WidthRequest + horizontal.TranslationX < 0)
+		{
+			horizontal.Children.Remove(visualizar);
+			horizontal.Children.Add(visualizar);
+			horizontal.TranslationX = visualizar.TranslationX;
+		}
+	}
+
+	async Task Drawn()
+	{
+		while (!IsDead)
+		{
+			GerenciaCenarios();
+			await Task.Delay(Fps);
+		}
+	}
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 }
 
