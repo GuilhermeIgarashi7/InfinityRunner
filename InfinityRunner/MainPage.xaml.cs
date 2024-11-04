@@ -48,6 +48,7 @@ public partial class MainPage : ContentPage
 	{
 		base.OnSizeAllocated(width, heigth);
 		CorrectWindowSize(width, heigth);
+		SpeedCalculate(width);
 			 
 	}
 
