@@ -89,15 +89,18 @@
 
                         <Image Source="chao.png"
                                VerticalOptions="EndAndExpand"
-                               HorizontalOptions ="FillAndExpand"/>
+                               HorizontalOptions ="FillAndExpand"
+                               WidthRequest="400"/>
 
                         <Image Source="chao.png"
                                VerticalOptions="EndAndExpand"
-                                HorizontalOptions="FillAndExpand"/>
+                                HorizontalOptions="FillAndExpand"
+                                WidthRequest="400"/>
 
                         <Image Source="chao.png"
                                VerticalOptions="EndAndExpand"
-                               HorizontalOptions="FillAndExpand"/>
+                               HorizontalOptions="FillAndExpand"
+                               WidthRequest="400"/>
 
                 </HorizontalStackLayout>
 
