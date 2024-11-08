@@ -44,6 +44,36 @@ public class Animation
         AnimationActive = a;
     }
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    public void Desenha()
+    {
+        if(Stopped)
+            return;
+        
+        string NomeDoArquivo = "";
+        int AnimationHeight = 0;
+
+        if (AnimationActive == 1)
+        {
+            NomeDoArquivo = Animation1[AnimationActive];
+            AnimationHeight = Animation1.Count;
+        }
+        else if (AnimationActive == 2)
+        {
+            NomeDoArquivo = Animation2[AnimationActive];
+            AnimationHeight = Animation2.Count;            
+        }
+        else if (AnimationActive == 3)
+        {
+            NomeDoArquivo = Animation3[AnimationActive];
+            AnimationHeight = Animation3.Count;            
+        }
+    }
+    
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+
+
 }
 
 }
