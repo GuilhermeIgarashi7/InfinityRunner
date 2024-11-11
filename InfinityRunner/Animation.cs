@@ -15,6 +15,7 @@ public class Animation
 
     protected Image compImage;
 
+
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     private bool  Stopped = true;
 
@@ -67,6 +68,17 @@ public class Animation
         {
             NomeDoArquivo = Animation3[AnimationActive];
             AnimationHeight = Animation3.Count;            
+        }
+
+        compImage.Source = ImageSource.FromFile(NomeDoArquivo);
+        ActualFrame ++;
+
+        if (ActualFrame >= AnimationHeight)
+        {
+            if(Loop)
+            {
+                ActualFrame = 0;
+            }
         }
     }
     
