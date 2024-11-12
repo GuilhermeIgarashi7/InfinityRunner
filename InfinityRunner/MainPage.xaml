@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InfinityRunner.MainPage"
+              xmlns:ffimageloading="clr-namespace:FFImageLoading.Maui;assembly=FFImageLoading.Maui"
              Shell.NavBarIsVisible="False">
 
        <Grid>
@@ -104,13 +105,9 @@
 
               </HorizontalStackLayout>
 
-              <Image x:Name="imgJogador"
-                     VerticalOptions="End"
-                     Margin="0,0,0,75"
-                     HeightRequest="150"
-                     WidthRequest="150"
-                     HorizontalOptions="Start"
-                     Aspect="Fill"/>
+              <ffimageloading:CachedImageView x:Name="imgJogador"
+                                              CacheType ="All"
+                                              CacheDuration="365"/>
 
        </Grid>
 

@@ -1,9 +1,11 @@
+using FFImageLoading.Maui;
+
 namespace InfinityRunner
 {
     public delegate void CallBack();
     public class Jogador:Animation
     {
-        public Jogador(Image a): base(a)
+        public Jogador(CachedImage a): base(a)
         {
             for(int numero = 1; numero <= 5; numero++)
                 Animation1.Add($"andar{numero.ToString("D2")}.png");
