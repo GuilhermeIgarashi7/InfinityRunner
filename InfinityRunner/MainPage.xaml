@@ -4,108 +4,115 @@
              x:Class="InfinityRunner.MainPage"
              Shell.NavBarIsVisible="False">
 
-        <Grid>
+       <Grid>
 
-                <HorizontalStackLayout x:Name="HorizontalLayer1">
+              <HorizontalStackLayout x:Name="HorizontalLayer1">
 
-                        <Image Source="fundo1.png"
-                               VerticalOptions="StartAndExpand"
-                               Aspect="AspectFill"/>
-                        <Image Source="fundo1.png"
-                               VerticalOptions="StartAndExpand"
-                               Aspect="AspectFill"/>
-                        <Image Source="fundo1.png"
-                               VerticalOptions="StartAndExpand"
-                               Aspect="AspectFill"/>
-                </HorizontalStackLayout>
+                     <Image Source="fundo1.png"
+                            VerticalOptions="StartAndExpand"
+                            Aspect="AspectFill"/>
+                     <Image Source="fundo1.png"
+                            VerticalOptions="StartAndExpand"
+                            Aspect="AspectFill"/>
+                     <Image Source="fundo1.png"
+                            VerticalOptions="StartAndExpand"
+                            Aspect="AspectFill"/>
+              </HorizontalStackLayout>
 
-                <HorizontalStackLayout x:Name="HorizontalLayer6">
+              <HorizontalStackLayout x:Name="HorizontalLayer6">
 
-                        <Image Source="fundo6.png"
-                               VerticalOptions="StartAndExpand"
-                               Aspect="AspectFill"/>
-                        <Image Source="fundo6.png"
-                               VerticalOptions="StartAndExpand"
-                               Aspect="AspectFill"/>
-                        <Image Source="fundo6.png"
-                               VerticalOptions="StartAndExpand"
-                               Aspect="AspectFill"/>
-                </HorizontalStackLayout>
+                     <Image Source="fundo6.png"
+                            VerticalOptions="StartAndExpand"
+                            Aspect="AspectFill"/>
+                     <Image Source="fundo6.png"
+                            VerticalOptions="StartAndExpand"
+                            Aspect="AspectFill"/>
+                     <Image Source="fundo6.png"
+                            VerticalOptions="StartAndExpand"
+                            Aspect="AspectFill"/>
+              </HorizontalStackLayout>
 
-                <HorizontalStackLayout x:Name="HorizontalLayer2">
+              <HorizontalStackLayout x:Name="HorizontalLayer2">
 
-                        <Image Source="fundo2.png"
-                               VerticalOptions="FillAndExpand"/>
-                        <Image Source="fundo2.png"
-                               VerticalOptions="FillAndExpand"/>
-                        <Image Source="fundo2.png"
-                               VerticalOptions="FillAndExpand"/>
+                     <Image Source="fundo2.png"
+                            VerticalOptions="FillAndExpand"/>
+                     <Image Source="fundo2.png"
+                            VerticalOptions="FillAndExpand"/>
+                     <Image Source="fundo2.png"
+                            VerticalOptions="FillAndExpand"/>
 
-                </HorizontalStackLayout>
+              </HorizontalStackLayout>
 
-                <HorizontalStackLayout x:Name="HorizontalLayer3">
+              <HorizontalStackLayout x:Name="HorizontalLayer3">
 
-                        <Image Source="fundo3.png"
-                               VerticalOptions="EndAndExpand"
-                               Margin="0,50,0,0"/>
-                        <Image Source="fundo3.png"
-                               VerticalOptions="EndAndExpand"
-                               Margin="0,50,0,0"/>
-                        <Image Source="fundo3.png"
-                               VerticalOptions="EndAndExpand"
-                               Margin="0,50,0,0"/>
+                     <Image Source="fundo3.png"
+                            VerticalOptions="EndAndExpand"
+                            Margin="0,50,0,0"/>
+                     <Image Source="fundo3.png"
+                            VerticalOptions="EndAndExpand"
+                            Margin="0,50,0,0"/>
+                     <Image Source="fundo3.png"
+                            VerticalOptions="EndAndExpand"
+                            Margin="0,50,0,0"/>
 
-                </HorizontalStackLayout>
+              </HorizontalStackLayout>
 
-                <HorizontalStackLayout x:Name="HorizontalLayer4">
+              <HorizontalStackLayout x:Name="HorizontalLayer4">
 
-                        <Image Source="fundo4.png"
-                               VerticalOptions="EndAndExpand"
-                               Margin="0,50,0,0"/>
-                        <Image Source="fundo4.png"
-                               VerticalOptions="EndAndExpand"
-                               Margin="0,50,0,0"/>
-                        <Image Source="fundo4.png"
-                               VerticalOptions="EndAndExpand"
-                               Margin="0,50,0,0"/>
+                     <Image Source="fundo4.png"
+                            VerticalOptions="EndAndExpand"
+                            Margin="0,50,0,0"/>
+                     <Image Source="fundo4.png"
+                            VerticalOptions="EndAndExpand"
+                            Margin="0,50,0,0"/>
+                     <Image Source="fundo4.png"
+                            VerticalOptions="EndAndExpand"
+                            Margin="0,50,0,0"/>
 
-                </HorizontalStackLayout>
+              </HorizontalStackLayout>
 
-                <HorizontalStackLayout x:Name="HorizontalLayer5">
+              <HorizontalStackLayout x:Name="HorizontalLayer5">
 
-                        <Image Source="fundo5.png"
-                               VerticalOptions="EndAndExpand"
-                               Margin="0,50,0,0"/>
-                        <Image Source="fundo5.png"
-                               VerticalOptions="EndAndExpand"
-                               Margin="0,50,0,0"/>
-                        <Image Source="fundo5.png"
-                               VerticalOptions="EndAndExpand"
-                               Margin="0,50,0,0"/>
+                     <Image Source="fundo5.png"
+                            VerticalOptions="EndAndExpand"
+                            Margin="0,50,0,0"/>
+                     <Image Source="fundo5.png"
+                            VerticalOptions="EndAndExpand"
+                            Margin="0,50,0,0"/>
+                     <Image Source="fundo5.png"
+                            VerticalOptions="EndAndExpand"
+                            Margin="0,50,0,0"/>
 
-                </HorizontalStackLayout>
+              </HorizontalStackLayout>
 
-                <HorizontalStackLayout x:Name="HorizontalChao">
+              <HorizontalStackLayout x:Name="HorizontalChao">
 
-                        <Image Source="chao.png"
-                               VerticalOptions="EndAndExpand"
-                               HorizontalOptions ="FillAndExpand"
-                               WidthRequest="400"/>
+                     <Image Source="chao.png"
+                            VerticalOptions="EndAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            WidthRequest="400"/>
 
-                        <Image Source="chao.png"
-                               VerticalOptions="EndAndExpand"
-                                HorizontalOptions="FillAndExpand"
-                                WidthRequest="400"/>
+                     <Image Source="chao.png"
+                            VerticalOptions="EndAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            WidthRequest="400"/>
 
-                        <Image Source="chao.png"
-                               VerticalOptions="EndAndExpand"
-                               HorizontalOptions="FillAndExpand"
-                               WidthRequest="400"/>
+                     <Image Source="chao.png"
+                            VerticalOptions="EndAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            WidthRequest="400"/>
 
-                </HorizontalStackLayout>
-                
+              </HorizontalStackLayout>
 
-        </Grid>
+              <Image x:Name="imgJogador"
+                     VerticalOptions="End"
+                     Margin="0,0,0,75"
+                     HeightRequest="150"
+                     WidthRequest="150"
+                     HorizontalOptions="Start"
+                     Aspect="Fill"/>
+
+       </Grid>
 
 
 

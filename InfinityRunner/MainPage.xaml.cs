@@ -35,11 +35,17 @@ public partial class MainPage : ContentPage
 
 	private int WindowHeight = 0;
 
+	Jogador jogador;
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	public MainPage()
 	{
 		InitializeComponent();
+
+		jogador= new Jogador(imgJogador);
+		jogador.Run();
+
 	}
 
 	protected override void OnAppearing()
@@ -142,6 +148,7 @@ public partial class MainPage : ContentPage
 	{
 		while (!IsDead)
 		{
+			jogador.Desenha();
 			GerenciaCenarios();
 			await Task.Delay(Fps);
 		}

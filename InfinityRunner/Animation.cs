@@ -56,17 +56,17 @@ public class Animation
 
         if (AnimationActive == 1)
         {
-            NomeDoArquivo = Animation1[AnimationActive];
+            NomeDoArquivo = Animation1[ActualFrame];
             AnimationHeight = Animation1.Count;
         }
         else if (AnimationActive == 2)
         {
-            NomeDoArquivo = Animation2[AnimationActive];
+            NomeDoArquivo = Animation2[ActualFrame];
             AnimationHeight = Animation2.Count;            
         }
         else if (AnimationActive == 3)
         {
-            NomeDoArquivo = Animation3[AnimationActive];
+            NomeDoArquivo = Animation3[ActualFrame];
             AnimationHeight = Animation3.Count;            
         }
 
@@ -79,9 +79,18 @@ public class Animation
             {
                 ActualFrame = 0;
             }
+            else
+            {
+                Stopped = true;
+                QuandoParar();
+            }
         }
     }
     
+    public virtual void QuandoParar()
+    {
+
+    }
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
 
