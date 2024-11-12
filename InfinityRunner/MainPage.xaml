@@ -90,17 +90,17 @@
                      <Image Source="chao.png"
                             VerticalOptions="EndAndExpand"
                             HorizontalOptions="FillAndExpand"
-                            WidthRequest="400"/>
+                            Aspect="AspectFill"/>
 
                      <Image Source="chao.png"
                             VerticalOptions="EndAndExpand"
                             HorizontalOptions="FillAndExpand"
-                            WidthRequest="400"/>
+                            Aspect="AspectFill"/>
 
                      <Image Source="chao.png"
                             VerticalOptions="EndAndExpand"
                             HorizontalOptions="FillAndExpand"
-                            WidthRequest="400"/>
+                            Aspect="AspectFill"/>
 
               </HorizontalStackLayout>
 
