@@ -107,7 +107,11 @@
 
               <ffimageloading:CachedImageView x:Name="imgJogador"
                                               CacheType ="All"
-                                              CacheDuration="365"/>
+                                              CacheDuration="365"
+                                              HeightRequest="150"
+                                              HorizontalOptions ="Start"
+                                              VerticalOptions="End"
+                                              Margin="0,0,0,25"/>
 
        </Grid>
 
