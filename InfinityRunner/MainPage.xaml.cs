@@ -1,4 +1,7 @@
-﻿namespace InfinityRunner;
+﻿using FFImageLoading.Maui;
+
+namespace InfinityRunner;
+
 
 
 

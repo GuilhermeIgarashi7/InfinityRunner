@@ -15,7 +15,6 @@ public class Animation
 
     protected int AnimationActive = 1;
 
-    protected Image compImage;
 
     protected CachedImageView ImageView;
 
@@ -27,9 +26,9 @@ public class Animation
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
 
-    public Animation (CachedImage image)
+    public Animation (CachedImageView animacao)
     {
-        compImage = image;
+        ImageView = animacao;
     }
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -74,7 +73,7 @@ public class Animation
             AnimationHeight = Animation3.Count;            
         }
 
-        compImage.Source = ImageSource.FromFile(NomeDoArquivo);
+        ImageView.Source = ImageSource.FromFile(NomeDoArquivo);
         ActualFrame ++;
 
         if (ActualFrame >= AnimationHeight)
