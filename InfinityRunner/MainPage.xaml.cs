@@ -13,12 +13,23 @@ public partial class MainPage : ContentPage
 
 	private bool IsJumping = false;
 
+	private bool IsOnFloor = false;
+
+	private bool IsMidAir = false;
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	const int Fps = 25;
 
-//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	const int GravityStrength = 6;
 
+	const int JumpStrength = 8;
+
+	const int MaxTimingJumping = 6;
+
+	const int MaxAirTiming = 4;
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	private int Speed1 = 0;
 
@@ -38,7 +49,15 @@ public partial class MainPage : ContentPage
 
 	private int WindowHeight = 0;
 
+	private int JumpTiming = 0;
+
+	private int AirTiming = 0;
+
 	Jogador jogador;
+
+
+
+	
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -151,12 +170,65 @@ public partial class MainPage : ContentPage
 	{
 		while (!IsDead)
 		{
-			jogador.Desenha();
-			GerenciaCenarios();
-			await Task.Delay(Fps);
+			if(IsJumping && !IsMidAir)
+			{
+				ApplyGravity();
+				jogador.Desenha();
+			}
+			else
+			JumpApply();
 		}
+		GerenciaCenarios();
+		await Task.Delay(Fps);
 	}
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+	void ApplyGravity()
+	{
+		if (jogador.GetY() < 0)
+		{
+			jogador.MoveY(GravityStrength);
+		}	
+		else if (jogador.GetY()>= 0)
+		{
+			jogador.SetY(0);
+			IsOnFloor = true;
+		}
+	}
+
+	void JumpApply()
+	{
+		IsOnFloor = false;
+		if (IsJumping && JumpTiming >= MaxAirTiming)
+		{
+			IsJumping = false;
+			IsMidAir = true;
+			AirTiming = 0;
+		}
+		else if (IsMidAir && AirTiming >= MaxAirTiming)
+		{
+			IsJumping = false;
+			IsMidAir = false;
+			JumpTiming = 0;
+			AirTiming = 0;
+		}
+		else if (IsJumping && JumpTiming < MaxTimingJumping)
+		{
+			jogador.MoveY(-JumpStrength);
+			JumpTiming++;
+		}
+		else if(IsMidAir)
+		{
+			AirTiming++;
+		}
+	}
+
+	void OnGridTapped(object a, TappedEventArgs e)
+	{
+		if(IsOnFloor)
+		{
+			IsJumping = true;
+		}
+	}
 }
 

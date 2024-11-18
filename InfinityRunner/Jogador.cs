@@ -28,5 +28,20 @@ namespace InfinityRunner
             StartGame();
         }
 
+        public void MoveY(int y)
+        {
+            ImageView.TranslationY += y;
+        }
+
+        public double GetY()
+        {
+            return ImageView.TranslationY;
+        }
+
+        public void SetY(double a)
+        {
+            ImageView.TranslationY = a;
+        }
+
     }
 }
