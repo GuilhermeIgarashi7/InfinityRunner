@@ -5,7 +5,7 @@ namespace InfinityRunner
     public delegate void CallBack();
     public class Jogador:Animation
     {
-        public Jogador(CachedImage a): base(a)
+        public Jogador(CachedImageView a): base(a)
         {
             for(int numero = 1; numero <= 5; numero++)
                 Animation1.Add($"andar{numero.ToString("D2")}.png");
