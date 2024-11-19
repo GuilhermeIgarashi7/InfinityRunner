@@ -87,7 +87,9 @@ public class Animation
                 Stopped = true;
                 QuandoParar();
             }
+
         }
+
     }
     
     public virtual void QuandoParar()
