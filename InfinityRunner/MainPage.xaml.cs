@@ -21,9 +21,9 @@ public partial class MainPage : ContentPage
 
 	const int Fps = 25;
 
-	const int GravityStrength = 6;
+	const int GravityStrength = 10;
 
-	const int JumpStrength = 8;
+	const int JumpStrength = 50;
 
 	const int MaxTimingJumping = 6;
 
@@ -170,16 +170,18 @@ public partial class MainPage : ContentPage
 	{
 		while (!IsDead)
 		{
-			if(IsJumping && !IsMidAir)
+
+		GerenciaCenarios();
+
+			if(!IsJumping && !IsMidAir)
 			{
 				ApplyGravity();
 				jogador.Desenha();
 			}
 			else
-			{
+			
 			JumpApply();
-		GerenciaCenarios();
-			}
+			
 		await Task.Delay(Fps);
 		}
 
